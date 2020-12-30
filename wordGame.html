@@ -25,6 +25,9 @@
             <h2>Guess the word in English</h2>
             <small>Click any letter to begin...</small>
         </div>
+        <div id="box"></div>
+        <div id="name"></div>
+
     </div>
 
     <!-- Game counters held here. Panels are being used to hold various sections. -->
@@ -52,12 +55,8 @@
 
                     <!-- This span section called wrong-guesses is where we will be dumping the wrong guesses. Pay particular attention to the id called ****wrong-guesses***. We'll be referencing this in the JavaScript. -->
                     <strong>Wrong Guesses: </strong> <span id='wrong-guesses'></span>
-
                 </div>
-            </div>
 
-            <!-- Third Panel: Holds the Number of Wrong Guesses. -->
-            <div class='panel panel-default'>
                 <div class='panel-body'>
 
                     <!-- This span is where we'll dump the number of guesses left. Pay attention to the id called ****guesses-left**** we'll be referencing this in the JavaScript. -->
@@ -67,7 +66,7 @@
 
             </div>
 
-            <!-- Fourth Panel: Holds the number of Wins. -->
+
             <div class='panel panel-default'>
 
                 <div class='panel-body'>
@@ -99,6 +98,10 @@
 <!-- Adds a link to the JavaScript file. Loaded at the bottom so it waits for the HTML content to display first. If you put this at the top it will crash, because the HTML IDs won't exist yet.-->
 <script src="words.js"></script>
 <script src='wordGame.js'></script>
+
+</body>
+</html>
+
 
 
 </body>

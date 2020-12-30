@@ -191,15 +191,23 @@ function roundComplete() {
 // Starts the Game by running the startGame() function
 startGame();
 
-// Then initiates the function for capturing key clicks.
-document.onkeyup = function (event) {
+//Get letters
 
-    // Converts all key clicks to lowercase letters.
+
+var html = '';
+var c;
+for (var i = 65; 90 >= i; i++) {// A-65, Z-90
+    c = String.fromCharCode(i);
+    html += '<button onclick="setLetter(\'' + c + '\');">' + c + '</button>';
+}
+document.getElementById('box').innerHTML = html;
+
+var setLetter = function (x) {
+    document.getElementById('name').innerHTML += x;
+
     letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
-
     // Runs the code to check for correct guesses.
     checkLetters(letterGuessed);
-
     // Runs the code that ends each round.
     roundComplete();
 };
